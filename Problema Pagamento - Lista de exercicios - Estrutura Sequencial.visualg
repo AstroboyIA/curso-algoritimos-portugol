@@ -1,0 +1,23 @@
+algoritmo "Problema Pagamento"
+
+var
+
+nome : caractere
+valorPorHora : real
+horasTrabalhadas : real
+pagamento : real
+
+inicio
+
+escreval("Digite o nome do funcionário: ")
+leia(nome)
+escreval("Digite o valor por hora trabalhada: ")
+leia(valorPorHora)
+escreval("Digite o total de horas trabalhadas: ")
+leia(horasTrabalhadas)
+
+pagamento <- horasTrabalhadas * valorPorHora
+
+escreval("O pagamento para ", nome, " deve ser ", pagamento:1:2)
+
+fimalgoritmo

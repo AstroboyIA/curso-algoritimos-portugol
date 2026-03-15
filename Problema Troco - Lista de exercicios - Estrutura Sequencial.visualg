@@ -1,0 +1,27 @@
+algoritmo "Problema Troco"
+
+var
+
+preco : real
+quantidade : inteiro
+precoTotal : real
+recebido : real
+troco : real
+
+inicio
+
+escreval("Preço unitário do produto: ")
+leia(preco)
+escreval("Quantidade comprada: ")
+leia(quantidade)
+
+precoTotal <- preco * quantidade
+
+escreval("Dinheiro recebido: ")
+leia(recebido)
+
+troco <- recebido - precoTotal
+
+escreval("Troco = ", troco:1:2)
+
+fimalgoritmo

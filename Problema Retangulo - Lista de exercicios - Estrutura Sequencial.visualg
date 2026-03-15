@@ -1,0 +1,27 @@
+algoritmo "Problema Retangulo"
+
+var
+
+base : real
+altura : real
+area : real
+perimetro : real
+diagonal : real
+
+inicio
+
+escreval("Digite a medida da base do triangulo: ")
+leia(base)
+escreval("Digite a medida da altura do triangulo: ")
+leia(altura)
+
+area <- base*altura 
+escreval("Area = ", area:1:4)
+
+perimetro <- 2 * (base + altura)
+escreval("Perimetro = ", perimetro:1:4)
+
+diagonal <- RaizQ(base ^2 + altura^2)
+escreval("Diagonal = ", diagonal:1:4)
+
+fimalgoritmo

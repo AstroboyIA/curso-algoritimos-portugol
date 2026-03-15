@@ -1,0 +1,26 @@
+algoritmo "Problema Idades"
+
+var
+
+nome1 : caractere
+idade1 : inteiro
+nome2 : caractere
+idade2 : inteiro
+media : real
+
+inicio
+
+escreval("Digite o nome da primeira pessoa: ")
+leia(nome1)
+escreval("Digite a idade da primeira pessoa: ")
+leia(idade1)
+escreval("Digite o nome da segunda pessoa: ")
+leia(nome2)
+escreval("Digite a idade da segunda pessoa: ")
+leia(idade2)
+
+media <- ((idade1 + idade2) / 2)
+
+escreval("A idade média de ", nome1, " e ", nome2, " é de ", media:1:1, " anos.")
+
+fimalgoritmo

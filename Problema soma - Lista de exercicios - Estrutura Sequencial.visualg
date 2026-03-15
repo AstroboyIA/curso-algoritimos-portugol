@@ -1,0 +1,19 @@
+algoritmo "Problema Soma"
+
+var
+
+x, y : inteiro
+
+resultado : inteiro
+
+inicio
+
+escreval("Digite o valor de x: ")
+leia(x)
+escreval("Digite o valor de y: ")
+leia(y)
+resultado <- x + y
+
+escreval("Soma = ", resultado)
+
+fimalgoritmo

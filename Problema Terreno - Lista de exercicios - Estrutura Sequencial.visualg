@@ -1,0 +1,26 @@
+algoritmo "Problema Terreno"
+
+var
+
+largura : real
+comprimento : real
+valorMetroQuadrado : real
+areaTerreno : real
+precoTerreno : real
+
+inicio
+
+escreval("Digite a largura do terreno: ")
+leia(largura)
+escreval("Digite o comprimento do terreno: ")
+leia(comprimento)
+escreval("Digite o valor do metro quadrado: ")
+leia(valorMetroQuadrado)
+
+areaTerreno <- largura * comprimento
+precoTerreno <- areaTerreno * valorMetroQuadrado
+
+escreval("Area total do terreno : ", areaTerreno:1:2)
+escreval("Preço total do terreno: ", precoTerreno:1:2)
+
+fimalgoritmo

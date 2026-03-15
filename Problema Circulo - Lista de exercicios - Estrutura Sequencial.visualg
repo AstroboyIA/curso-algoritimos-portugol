@@ -1,0 +1,20 @@
+algoritmo "Problema Circulo"
+
+var
+
+  raio : real
+  pi : real
+  area : real
+
+inicio
+
+  escreval("Digite o valor do raio do circulo: ")
+  leia(raio)
+  
+  pi <- 3.14159
+
+  area <- pi * (raio ^ 2)
+
+  escreval("Área = ", area:1:3)
+
+fimalgoritmo

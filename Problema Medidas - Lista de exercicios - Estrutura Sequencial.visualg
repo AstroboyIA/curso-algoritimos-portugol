@@ -1,0 +1,30 @@
+algoritmo "Problema Medidas"
+
+var
+
+  a : real
+  b : real
+  c : real
+
+  areaQuadrado : real
+  areaTriangulo : real
+  areaTrapezio : real
+
+inicio
+
+  escreval("Digite a medida A: ")
+  leia(a)
+  escreval("Digite a medida B: ")
+  leia(b)
+  escreval("Digite a medida C: ")
+  leia(c)
+
+  areaQuadrado <- a * 4
+  areaTriangulo <- (a * b) / 2
+  areaTrapezio <- ((a + b) * c) / 2
+
+  escreval("Área do quadrado = ", areaQuadrado:1:4)
+  escreval("Área do triângulo = ", areaTriangulo:1:4)
+  escreval("Área do trapézio = ", areaTrapezio:1:4)
+
+fimalgoritmo
