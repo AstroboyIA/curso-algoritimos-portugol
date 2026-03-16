@@ -1,0 +1,38 @@
+algoritmo "Problema Media Idades"
+
+var
+
+  idade, somador, contador : inteiro
+  media : real
+
+inicio
+
+  contador <- 0
+  somador <- 0
+
+  escreval("Digite as idades: ")
+
+  leia(idade)
+
+  se idade < 0 entao
+
+    escreval("Impossivel Calcular")
+
+  senao
+
+    enquanto idade >= 0 faca
+
+      somador <- somador + idade
+      contador <- contador + 1
+
+      leia(idade)
+
+    fimenquanto
+
+    media <- somador/contador
+
+    escreval("Média = ", media:1:2)
+
+  fimse
+
+fimalgoritmo

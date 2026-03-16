@@ -1,0 +1,26 @@
+algoritmo "Problema Crescente"
+
+var
+
+  x, y : inteiro
+
+inicio
+
+  escreval("Digite dois números: ")
+  leia(x)
+  leia(y)
+
+  enquanto x <> y faca
+    se x > y entao
+      escreval("Descrecente!")
+    senao
+      escreval("Crescente!")
+    fimse
+
+    escreval("Escreva outros dois números: ")
+    leia(x)
+    leia(y)
+
+  fimenquanto
+
+fimalgoritmo

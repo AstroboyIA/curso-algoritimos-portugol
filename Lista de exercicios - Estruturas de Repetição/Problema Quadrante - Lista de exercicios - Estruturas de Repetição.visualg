@@ -1,0 +1,51 @@
+algoritmo "Problema Quadrante"
+
+var
+
+  x, y : inteiro
+  q1, q2, q3, q4 : caractere
+
+inicio
+  q1 <- "Quadrante Q1"
+  q2<- "Quadrante Q2"
+  q3 <- "Quadrante Q3"
+  q4 <- "Quadrante Q4"
+
+  escreval("Digite as coordenadas de X e Y: ")
+
+  leia(x)
+  leia(y)
+
+
+
+  enquanto (x <> 0) e (y <> 0) faca
+
+    se x > 0 e y > 0 entao
+
+      escreval(q1)
+
+    senao se x > 0 e y < 0 entao
+
+      escreval(q4)
+
+    senao se x < 0 e y < 0 entao
+
+      escreval(q3)
+
+    senao
+
+      escreval(q2)
+
+    fimse
+  fimse
+fimse
+
+escreval("Digite as coordenadas de X e Y: ")
+
+leia(x)
+leia(y)
+
+fimenquanto
+
+
+fimalgoritmo
