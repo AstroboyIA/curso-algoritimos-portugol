@@ -1,0 +1,23 @@
+algoritmo "Problema Tabuada"
+
+var
+
+  x, y, z, i : inteiro
+
+inicio
+
+  escreval("Deseja a tabuada de qual valor?: ")
+  leia(x)
+
+  y <- 1
+  para i de 1 ate 10 faca
+
+  z <- x * y
+
+  escreval(x," x ", y, " = ", z)
+  
+  y <- y + 1
+  
+  fimpara
+
+fimalgoritmo
