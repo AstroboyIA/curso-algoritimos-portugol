@@ -1,0 +1,56 @@
+algoritmo "Problema Dados Pessoas"
+
+var
+
+  n, i, numHom : inteiro
+  media, maior, menor, cont : real
+  altura : vetor[0 .. 9] de real
+  genero : vetor[0 .. 9] de caractere
+
+inicio
+
+  media <- 0.0
+  menor <- 0.0
+  maior <- 0.0
+  cont <- 0.0
+  numHom <- 0
+
+  escreval("Quantos pessoas serão digitadas?: ")
+  leia(n)
+  para i de 0 ate n-1 faca
+
+    escreval("Altura da ", i+1, "ª pessoa: ")
+    leia(altura[i])
+    escreval("Genero da ", i+1, "ª pessoa: ")
+    leia(genero[i])
+
+    cont <- cont + altura[i]
+  fimpara
+
+  maior <- altura[0]
+  menor <- altura[0]
+  para i de 1 ate n-1 faca
+
+    se menor > altura[i] entao
+
+      menor <- altura[i]
+    fimse
+
+    se maior < altura[i] entao
+
+      maior <- altura[i]
+    fimse
+    
+    se genero[i] = "M" entao
+
+    numHom <- numHom + 1
+    fimse
+  fimpara
+
+  media <- cont / n
+
+  escreval("Menor altura = ", menor:1:2)
+  escreval("Maior altura = ", maior:1:2)
+  escreval("Média das alturas das mulheres = ", media:1:2)
+  escreval("Número de homens = ", numHom)
+fimalgoritmo

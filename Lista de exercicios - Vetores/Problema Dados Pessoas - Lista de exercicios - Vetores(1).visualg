@@ -1,0 +1,62 @@
+algoritmo "Problema Dados Pessoas"
+
+var
+
+  n, i, abaixo, entre, acima : inteiro
+  percent, totalCompra, totalVenda, lucro : real
+  compra, venda : vetor[0 .. 999] de real
+  nome : vetor[0 .. 9] de caractere
+
+inicio
+
+  percent <- 0
+  abaixo<- 0
+  entre <- 0
+  acima <- 0
+  totalCompra <- 0
+  totalVenda <- 0
+  lucro <- 0
+
+  escreval("Serão digitados dados de quantos produtos?: ")
+  leia(n)
+  para i de 0 ate n-1 faca
+
+    escreval("Produto ", i+1, ":")
+    escreval("Nome: ")
+    leia(nome[i])
+    escreval("Preço de compra: ")
+    leia(compra[i])
+    escreval("Preço de venda: ")
+    leia(venda[i])
+
+    totalCompra <- totalCompra + compra[i]
+    totalVenda <- totalVenda + venda[i]
+  fimpara
+
+  para i de 0 ate n-1 faca
+
+    percent <- (venda[i] - compra[i]) / venda[i]
+
+    se percent < 0.1 entao
+
+      abaixo <- abaixo + 1
+    senao
+      se percent <= 0.2 entao
+
+        entre <- entre + 1
+      senao
+        acima <- acima + 1
+      fimse
+    fimse
+  fimpara
+
+  lucro <- totalVenda - totalCompra
+
+  escreval("RELATÓRIO:")
+  escreval("Lucro abaixo de 10%: ", abaixo)
+  escreval("Lucro entre 10% e 20%: ", entre)
+  escreval("Lucro acima de 20%: ", acima)
+  escreval("Valor total de compra: ",totalCompra:1:2)
+  escreval("Valor total de venda: ", totalVenda:1:2)
+  escreval("Lucro total: ",lucro)
+fimalgoritmo
