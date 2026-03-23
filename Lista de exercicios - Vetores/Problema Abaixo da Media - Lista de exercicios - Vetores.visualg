@@ -1,0 +1,42 @@
+algoritmo "Problema Abaixo da Média"
+
+var
+
+  n, i : inteiro
+  media, cont : real
+  vet, vetAbaixo : vetor[0 .. 9] de real
+
+inicio
+
+  media <- 0
+  cont <- 0
+
+  escreval("Quantos elementos vai ter o vetor?: ")
+  leia(n)
+  para i de 0 ate n-1 faca
+
+    escreval("Digite um elemento: ")
+    leia(vet[i])
+
+    cont <- cont + vet[i]
+  fimpara
+
+  media <- cont / n
+
+  para i de 0 ate n-1 faca
+    se vet[i] < media entao
+
+      vetAbaixo[i] <- vet[i]
+    fimse
+  fimpara
+
+  escreval("MÉDIA DO VETOR: ",media:1:3)
+  escreval("ELEMENTOS ABAIXO DA MÉDIA: ")
+
+  para i de 0 ate n-1 faca
+    se vetAbaixo[i] > 0.0 entao
+    
+    escreval(vetAbaixo[i]:1:1)
+    fimse
+  fimpara
+fimalgoritmo

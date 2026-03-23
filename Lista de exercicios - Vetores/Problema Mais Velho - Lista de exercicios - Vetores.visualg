@@ -1,0 +1,36 @@
+algoritmo "Problema Mais Velho"
+
+var
+
+  n, i, idadeMaior : inteiro
+  maisVelho : caractere
+  idades : vetor[0 .. 9] de inteiro
+  nomes : vetor[0 .. 9] de caractere
+
+inicio
+
+  escreval("Quantas pessoas você vai digitar?: ")
+  leia(n)
+  para i de 0 ate n-1 faca
+
+    escreval("Dados da ",i+1, "ª pessoa: ")
+    escreval("Nome: ")
+    leia(nomes[i])
+    escreval("Idade: ")
+    leia(idades[i])
+  fimpara
+
+  idadeMaior <- idades[0]
+  maisVelho <- nomes[0]
+
+  para i de 1 ate n-1 faca
+
+    se idadeMaior < idades[i] entao
+
+      idadeMaior <- idades[i]
+      maisVelho <- nomes[i]
+    fimse
+  fimpara
+
+  escreval("PESSOA MAIS VELHA: ", maisVelho)
+fimalgoritmo
