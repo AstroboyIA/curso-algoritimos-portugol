@@ -1,0 +1,30 @@
+algoritmo "Exemplo de Matriz"
+
+var
+  m, n, i, j, aux: inteiro
+  m1: matriz [0 .. 4, 0 .. 4] de inteiro
+
+inicio
+
+  escreval("Quantas linhas vai ter a matriz?: ")
+  leia(m)
+  escreval("Quantas colunas vai ter a matriz?: ")
+  leia(n)
+
+  para i de 0 ate m-1 faca    
+    para j de 0 ate n-1 faca
+      escreval("Elemento [", i,",", j, "]: ")
+      leia(aux)
+      m1[i,j] <- aux
+    fimpara
+  fimpara
+
+  escreval("")
+  escreval("MATRIZ DIGITADA: ")
+  para i de 0 ate m-1 faca
+    para j de 0 ate n-1 faca
+      escreva(m1 [i,j]:2, " ")
+    fimpara
+    escreval("")
+  fimpara
+fimalgoritmo

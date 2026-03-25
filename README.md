@@ -9,4 +9,5 @@ Este repositório contém todos os exercícios práticos que estou desenvolvendo
 * Estrutura Sequencial
 * Estrutura Condicional
 * Estruturas Repetitivas
-* Vetores e Matrizes (Em andamento)
+* Vetores 
+* Matrizes (Em andamento)
