@@ -1,0 +1,29 @@
+algoritmo "Problema Acima Diagonal"
+
+var
+
+  c, l, i, j, aux, soma : inteiro
+  mat : matriz [0 .. 9, 0 .. 9] de inteiro
+inicio
+
+  escreval("Qual a ordem da matriz?: ")
+  leia(l)
+  para i de 0 ate l-1 faca
+    para j de 0 ate l-1 faca
+
+      escreval("Elemento [",i,",",j,"]: ")
+      leia(aux)
+      mat[i,j] <- aux
+    fimpara
+  fimpara
+
+  soma <- 0
+  para i de 0 ate l-1 faca
+    para j de i+1 ate l-1 faca
+
+        soma <- soma + mat[i,j]
+    fimpara
+  fimpara
+
+  escreval("Soma dos elementos acima da diagonal principal: ", soma)
+fimalgoritmo

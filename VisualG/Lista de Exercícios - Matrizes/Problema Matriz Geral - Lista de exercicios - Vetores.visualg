@@ -1,0 +1,70 @@
+algoritmo "Problema Matriz Geral"
+
+var
+  n, linha, coluna, i, j,  : inteiro
+  aux, soma : real
+  mat : matriz [0 .. 9, 0 .. 9] de real
+
+inicio
+
+  escreval("Qual a ordem da matriz?: ")
+  leia(n)
+  para i de 0 ate n-1 faca
+    para j de 0 ate n-1 faca
+
+      escreval("Elemento [",i,",",j,"]: ")
+      leia(aux)
+      mat[i,j] <- aux
+    fimpara
+  fimpara
+
+  soma <- 0
+  para i de 0 ate n-1 faca
+    para j de 0 ate n-1 faca
+      se mat[i,j] > 0 entao
+
+        soma <- soma + mat[i,j]
+      fimse
+    fimpara
+  fimpara
+
+  escreval("Soma dos positivos: ", soma:1:1)
+
+  escreval("")
+  escreval("Escolha uma linha: ")
+  leia(linha)
+
+  para j de 0 ate n-1 faca
+
+    escreva(mat[linha,j]:1:1, " ")
+  fimpara
+
+  escreval(" ")
+  escreval("Escolha uma linha: ")
+  leia(coluna)
+
+  para i de 0 ate n-1 faca
+
+    escreva(mat[i,coluna]:1:1, " ")
+  fimpara
+
+  escreval(" ")
+  escreval("Diagonal principal: ")
+  para i de 0 ate n-1 faca
+    escreva(mat[i,i]:1:1, " ")
+  fimpara
+
+  escreval(" ")
+  escreval("Matriz Alterada: ")
+  para i de 0 ate n-1 faca
+    para j de 0 ate n-1 faca
+      se mat[i,j] < 0 entao
+        mat[i,j] <- mat[i,j]^2
+      fimse
+
+      escreva(mat[i,j]:1:1, " ")
+    fimpara
+    escreval("")
+  fimpara
+
+fimalgoritmo
